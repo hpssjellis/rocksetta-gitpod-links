@@ -11,4 +11,4 @@ https://hpssjellis.github.io/rocksetta-gitpod-links/
 
 until it gets moved to the main webiste at
 
-https://www.rocksetta.com/gitpod-links.html
+https://www.rocksetta.com/rocksetta-gitpod-links.html
