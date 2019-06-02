@@ -9,8 +9,10 @@ RUN apt-get update && apt-get install -y \
 
 
 
-#RUN wget https://developer.android.com/studio/#downloads \
-#   && unzip sdk-tools-linux-3859397.zip
+RUN \
+   wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
+   && unzip sdk-tools-linux-3859397.zip
+   
 
 USER gitpod
 # Apply user-specific settings
