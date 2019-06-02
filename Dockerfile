@@ -15,8 +15,8 @@ MAINTAINER Jeremy Ellis <keyfreemusic@gmail.com>
 # -------------------------- Transfer from Cloud9 Github to Docker -----------------------------------------
 # The Github is at https://github.com/c9/templates/tree/master/ws-android
 
-ADD ./files /home/ubuntu
-ADD ./files/profile.d-android.sh /etc/profile.d/android.sh
+#       ADD ./files /home/ubuntu
+#       ADD ./files/profile.d-android.sh /etc/profile.d/android.sh
 
 
 USER gitpod
@@ -119,9 +119,9 @@ RUN gradle
 
 # -------------------------- Final Cloud 9 Installation Actions -----------------------------------------
 
-RUN chown -R ubuntu:ubuntu /home/ubuntu && \
-    chmod 775 /home/ubuntu/start-here && \
-    cd /home/ubuntu/workspace
+#   RUN chown -R ubuntu:ubuntu /home/ubuntu && \
+#     chmod 775 /home/ubuntu/start-here && \
+#    cd /home/ubuntu/workspace
     
     
     
