@@ -1,18 +1,16 @@
 FROM gitpod/workspace-full:latest
 #FROM cloud9/workspace
-
-
-
-# Android Build Dockerfile for Parafuzo.
+## Android Build Dockerfile for Parafuzo.
 #
 # This is a fork from:
 # https://github.com/lukin0110/docker-android-build
-MAINTAINER Jeremy Ellis <keyfreemusic@gmail.com>
 
-
-# added jun 2019
-# moving all environments to user gitpod
 USER root
+
+
+
+
+MAINTAINER Jeremy Ellis <keyfreemusic@gmail.com>
 
 # -------------------------- Transfer from Cloud9 Github to Docker -----------------------------------------
 # The Github is at https://github.com/c9/templates/tree/master/ws-android
@@ -21,7 +19,18 @@ ADD ./files /home/ubuntu
 ADD ./files/profile.d-android.sh /etc/profile.d/android.sh
 
 
+USER gitpod
 
+
+
+
+# These commands just let us test the enviornment before submitting to cloud 9    
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+ENV PATH $PATH:$JAVA_HOME/bin
+
+
+
+USER root
 
 # -------------------------- Install necessary base packages ----------------------------------------- 
 
@@ -44,6 +53,22 @@ RUN SDK_VERSION=r24.3.3 && \
     bash -c 'for file in $(find /usr/local/android-sdk-*); do [[ -x $file ]] && chmod +x "$file"; done'; \
     exit 0
 
+USER gitpod
+
+
+
+
+# Android SDK Home and Path for pre-cloud9 testing
+ENV ANDROID_SDK_HOME /usr/local/android-sdk-linux
+ENV ANDROID_HOME /usr/local/android-sdk-linux
+ENV PATH $PATH:$ANDROID_SDK_HOME
+ENV PATH $PATH:$ANDROID_SDK_HOME/tools
+ENV PATH $PATH:$ANDROID_SDK_HOME/platform-tools
+
+
+USER root
+
+
 
 
 # -------------------------- Install the Android Platforms -----------------------------------------
@@ -57,6 +82,14 @@ RUN for filter in tools platform-tools android-20 android-22 android-23 extra bu
 
 # -------------------------- Install Gradle -----------------------------------------
 
+USER gitpod
+
+
+
+ENV GRADLE_VERSION 2.9
+
+
+USER root
 
 
 RUN cd /usr/local && \
@@ -68,6 +101,16 @@ RUN cd /usr/local && \
     exit 0
 
 
+USER gitpod
+
+
+
+#Gradle Home and Path for pre-cloud9 testing
+ENV GRADLE_HOME /usr/local/gradle-${GRADLE_VERSION}
+ENV PATH $PATH:$GRADLE_HOME/bin
+
+
+USER root
 
 
 # activate gradle by running it once    
@@ -80,42 +123,8 @@ RUN chown -R ubuntu:ubuntu /home/ubuntu && \
     chmod 775 /home/ubuntu/start-here && \
     cd /home/ubuntu/workspace
     
-
-
-
-
-
-
-USER gitpod
-
-
-
-
-# These commands just let us test the enviornment before submitting to cloud 9    
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
-ENV PATH $PATH:$JAVA_HOME/bin
-
-
-
-
-
-
-
-# Android SDK Home and Path for pre-cloud9 testing
-ENV ANDROID_SDK_HOME /usr/local/android-sdk-linux
-ENV ANDROID_HOME /usr/local/android-sdk-linux
-ENV PATH $PATH:$ANDROID_SDK_HOME
-ENV PATH $PATH:$ANDROID_SDK_HOME/tools
-ENV PATH $PATH:$ANDROID_SDK_HOME/platform-tools
-
-
-
-ENV GRADLE_VERSION 2.9
-
-
-#Gradle Home and Path for pre-cloud9 testing
-ENV GRADLE_HOME /usr/local/gradle-${GRADLE_VERSION}
-ENV PATH $PATH:$GRADLE_HOME/bin
-
-
-USER root
+    
+    
+    
+#leave it as USER root    
+    
