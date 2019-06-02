@@ -9,10 +9,22 @@ RUN apt-get update && apt-get install -y \
 
 
 
-RUN \
-   wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
-   && unzip sdk-tools-linux-3859397.zip
-   
+# RUN \
+#   wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip \
+#   && unzip sdk-tools-linux-3859397.zip
+ 
+ 
+# ./tools/bin/sdkmanager --list 
+
+# ./tools/bin/sdkmanager --list 
+
+# ./tools/bin/sdkmanager "platforms;android-28" "build-tools;28.0.3" done
+
+# ./tools/bin/sdkmanager --update
+
+ 
+ 
+ 
 
 USER gitpod
 # Apply user-specific settings
