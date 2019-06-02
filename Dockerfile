@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 
 # ./tools/bin/sdkmanager --list 
 
- ./tools/bin/sdkmanager "platforms;android-28" "build-tools;28.0.3" done
+ #./tools/bin/sdkmanager "platforms;android-28" "build-tools;28.0.3" done
 
 # ./tools/bin/sdkmanager --update
 
