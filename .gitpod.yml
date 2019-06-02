@@ -5,4 +5,4 @@ image:
 tasks:
   - before: setup.sh
     init: npm -V
-    #command: npm run dev
+    command: node -V
