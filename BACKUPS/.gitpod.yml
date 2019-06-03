@@ -1,0 +1,9 @@
+image:
+  #file: thyrlian/android-sdk
+  file: Dockerfile
+  
+  
+#tasks:
+#  - before: setup.sh
+#    init: npm -V
+#    command: node -V
