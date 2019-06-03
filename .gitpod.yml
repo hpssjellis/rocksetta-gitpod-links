@@ -1,5 +1,5 @@
 image:
-  file: docker/thyrlian/android-sdk
+  file: thyrlian/android-sdk
   #file: Dockerfile
   
   
