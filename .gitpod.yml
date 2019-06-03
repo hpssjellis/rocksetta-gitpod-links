@@ -2,7 +2,7 @@ image:
   file: Dockerfile
   
   
-#tasks:
-#  - before: setup.sh
-#    init: npm -V
-#    command: node -V
+tasks:
+  - before: setup.sh
+    init: npm -V
+    command: node -V
