@@ -1,6 +1,6 @@
 image:
-  file: thyrlian/android-sdk
-  #file: Dockerfile
+  #file: thyrlian/android-sdk
+  file: Dockerfile
   
   
 #tasks:
