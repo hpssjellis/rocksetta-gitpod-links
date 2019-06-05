@@ -13,7 +13,7 @@ in front of any repository url (I will put it inside the url) like this to fully
 https://gitpod.io/#hpssjellis.github.io/rocksetta-gitpod-links/
 
 
-Personnally I like snapshots which are saved gitpods not live generated
+Personnally I like snapshots which are saved gitpods not live generated, however the Dockerfile method has some flexibility that the snapshots don't
 .
 
 
