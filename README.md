@@ -5,11 +5,12 @@ Also testing if a Dockerfile can be loaded
 
 just type 
 
+gitpod.io/#
 
 
-in front of any repository url like this to fully generate a gitpod
+in front of any repository url (I will put it inside the url) like this to fully generate a gitpod
 
-gitpod.io/#https://hpssjellis.github.io/rocksetta-gitpod-links/
+https://gitpod.io/#hpssjellis.github.io/rocksetta-gitpod-links/
 
 
 
