@@ -1,7 +1,7 @@
 ## rocksetta-gitpod-links
 Just a github website of my gitpod links before I move them to my true website
 
-Also testing if a Dockerfile can be loaded
+Also testing if an absolute basic gitpod Dockerfile can be loaded
 
 just type 
 
