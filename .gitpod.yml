@@ -1,3 +1,7 @@
 image:
   file: Dockerfile
 
+tasks:
+  - before: echo "before"
+    init: echo "init"
+    command: echo "command"
