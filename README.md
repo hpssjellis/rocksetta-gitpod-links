@@ -20,7 +20,11 @@ Personnally I like snapshots which are saved gitpods not live generated, however
 
 
 
-.
+.Playlist of videos about gitpod at 
+
+https://www.youtube.com/watch?v=tcx6e4tvEQQ&list=PL57Dnr1H_egv6ieRrE_rKpDnsDNbFxhK9
+
+
 
 
 
